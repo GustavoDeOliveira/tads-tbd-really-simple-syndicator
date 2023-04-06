@@ -1,0 +1,21 @@
+@host=http://localhost:8080
+@feedId=a55e8f45-e8bb-478c-b552-4861d0b77867
+
+###
+POST {{host}}/api/v1/feed HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+    "nome": "IFRS",
+    "url": "https://ifrs.edu.br/rss",
+    "categoria": "Educação"
+}
+
+###
+GET {{host}}/api/v1/feed/{{feedId}} HTTP/1.1
+Accept: application/json
+
+###
+DELETE {{host}}/api/v1/feed/{{feedId}} HTTP/1.1
+Accept: application/json
