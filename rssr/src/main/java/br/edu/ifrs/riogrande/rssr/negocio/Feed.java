@@ -1,7 +1,7 @@
 package br.edu.ifrs.riogrande.rssr.negocio;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 public class Feed extends Entidade {
@@ -9,9 +9,7 @@ public class Feed extends Entidade {
     private String nome;
     private String url;
     private String categoria;
-    private LocalDateTime dataAdicionado;
-    private LocalDateTime dataAtualizado;
-    private ArrayList<Artigo> artigos;
+    private List<Artigo> artigos;
     
     @Override
     public UUID getId() {
@@ -45,27 +43,12 @@ public class Feed extends Entidade {
         this.categoria = categoria;
     }
 
-    public LocalDateTime getDataAdicionado() {
-        return dataAdicionado;
-    }
-
-    public void setDataAdicionado(LocalDateTime dataAdicionado) {
-        this.dataAdicionado = dataAdicionado;
-    }
-
-    public LocalDateTime getDataAtualizado() {
-        return dataAtualizado;
-    }
-
-    public void setDataAtualizado(LocalDateTime dataAtualizado) {
-        this.dataAtualizado = dataAtualizado;
-    }
-
-    public ArrayList<Artigo> getArtigos() {
+    public List<Artigo> getArtigos() {
+        if (artigos == null) artigos = new ArrayList<Artigo>();
         return artigos;
     }
 
-    public void setArtigos(ArrayList<Artigo> artigos) {
+    public void setArtigos(List<Artigo> artigos) {
         this.artigos = artigos;
     }
     

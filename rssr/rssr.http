@@ -1,0 +1,44 @@
+@host=http://localhost:8080
+@feedId=251daf43-06ac-4866-80f1-e261064a31bb
+
+###
+POST {{host}}/api/v1/feed HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+    "nome": "IFRS9",
+    "url": "https://ifrs.edu.br/rss",
+    "categoria": "Educacao"
+}
+
+###
+PUT {{host}}/api/v1/feed/{{feedId}} HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+    "nome": "IFRS10",
+    "url": "https://ifrs.edu.br/rss",
+    "categoria": "ensino-superior"
+}
+
+###
+GET {{host}}/api/v1/feed HTTP/1.1
+Accept: application/json
+
+###
+GET {{host}}/api/v1/feed?buscar=30 HTTP/1.1
+Accept: application/json
+
+###
+GET {{host}}/api/v1/feed/Ensino?buscar=5 HTTP/1.1
+Accept: application/json
+
+###
+GET {{host}}/api/v1/feed/{{feedId}}/content HTTP/1.1
+Accept: application/json
+
+###
+DELETE {{host}}/api/v1/feed/{{feedId}} HTTP/1.1
+Accept: application/json
