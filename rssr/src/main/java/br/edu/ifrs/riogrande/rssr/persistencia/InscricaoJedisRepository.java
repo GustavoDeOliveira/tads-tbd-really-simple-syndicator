@@ -100,10 +100,12 @@ public class InscricaoJedisRepository implements Repository<Inscricao> {
         Iterator<SyndEntry> itr = syndFeed.getEntries().iterator();
         while (itr.hasNext()) {
             SyndEntry syndEntry = (SyndEntry) itr.next();
+            String descricao = syndEntry.getDescription() != null
+                    ? syndEntry.getDescription().getValue() : "";
             inscricao.getFeed().add(new Artigo(
                 syndEntry.getTitle(),
+                descricao,
                 syndEntry.getLink(),
-                syndEntry.getUri(),
                 syndEntry.getPublishedDate(),
                 syndEntry.getContents().stream()
                     .map(c -> new Corpo(c.getValue(), c.getMode(), c.getType()))

@@ -2,7 +2,7 @@
 @feedId=efc923ca-a005-4c9b-b923-44f2e24b0b36
 
 ###
-POST {{host}}/api/v1/feed HTTP/1.1
+POST {{host}}/api/v1/inscricao HTTP/1.1
 Accept: application/json
 Content-Type: application/json
 
@@ -13,7 +13,7 @@ Content-Type: application/json
 }
 
 ###
-POST {{host}}/api/v1/feed HTTP/1.1
+POST {{host}}/api/v1/inscricao HTTP/1.1
 Accept: application/json
 Content-Type: application/json
 
@@ -24,7 +24,7 @@ Content-Type: application/json
 }
 
 ###
-PUT {{host}}/api/v1/feed/{{feedId}} HTTP/1.1
+PUT {{host}}/api/v1/inscricao/{{feedId}} HTTP/1.1
 Accept: application/json
 Content-Type: application/json
 
@@ -35,7 +35,7 @@ Content-Type: application/json
 }
 
 ###
-PUT {{host}}/api/v1/feed/{{feedId}} HTTP/1.1
+PUT {{host}}/api/v1/inscricao/{{feedId}} HTTP/1.1
 Accept: application/json
 Content-Type: application/json
 
@@ -46,25 +46,25 @@ Content-Type: application/json
 }
 
 ###
-GET {{host}}/api/v1/feed HTTP/1.1
+GET {{host}}/api/v1/inscricao HTTP/1.1
 Accept: application/json
 
 ###
-GET {{host}}/api/v1/feed?buscar=30 HTTP/1.1
+GET {{host}}/api/v1/inscricao?buscar=30 HTTP/1.1
 Accept: application/json
 
 ###
-GET {{host}}/api/v1/feed/noticias?buscar=5 HTTP/1.1
+GET {{host}}/api/v1/inscricao/noticias?buscar=5 HTTP/1.1
 Accept: application/json
 
 ###
-GET {{host}}/api/v1/feed/{{feedId}}/feed?pular=10&buscar=1 HTTP/1.1
+GET {{host}}/api/v1/inscricao/{{feedId}}/feed?pular=10&buscar=1 HTTP/1.1
 Accept: application/json
 
 ###
-GET {{host}}/api/v1/feed/{{feedId}}/feed?pular=0&buscar=100 HTTP/1.1
+GET {{host}}/api/v1/inscricao/{{feedId}}/feed?pular=0&buscar=100 HTTP/1.1
 Accept: application/json
 
 ###
-DELETE {{host}}/api/v1/feed/{{feedId}} HTTP/1.1
+DELETE {{host}}/api/v1/inscricao/{{feedId}} HTTP/1.1
 Accept: application/json

@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/v1/feed")
+@RequestMapping("/api/v1/inscricao")
 public class InscricaoController extends BaseController {
     private InscricaoJedisRepository repository;
 

@@ -5,18 +5,18 @@ import java.util.List;
 
 public class Artigo {
     private String titulo;
+    private String descricao;
     private String link;
-    private String urlImg;
     private Date dataPublicacao;
     private List<Corpo> conteudo;
 
     public Artigo() {
     }
 
-    public Artigo(String titulo, String link, String urlImg, Date dataPublicacao, List<Corpo> conteudo) {
+    public Artigo(String titulo, String descricao, String link, Date dataPublicacao, List<Corpo> conteudo) {
         this.titulo = titulo;
+        this.descricao = descricao;
         this.link = link;
-        this.urlImg = urlImg;
         this.dataPublicacao = dataPublicacao;
         this.conteudo = conteudo;
     }
@@ -29,20 +29,20 @@ public class Artigo {
         this.titulo = titulo;
     }
 
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
     public String getLink() {
         return this.link;
     }
 
     public void setLink(String link) {
         this.link = link;
-    }
-
-    public String getUrlImg() {
-        return this.urlImg;
-    }
-
-    public void setUrlImg(String urlImg) {
-        this.urlImg = urlImg;
     }
 
     public Date getDataPublicacao() {
