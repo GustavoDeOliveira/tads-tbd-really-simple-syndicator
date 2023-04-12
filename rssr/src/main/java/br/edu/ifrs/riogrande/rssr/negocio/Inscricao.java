@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-public class Feed extends Entidade {
+public class Inscricao extends Entidade {
     private UUID id;
     private String nome;
     private String url;
     private String categoria;
-    private List<Artigo> artigos;
+    private List<Artigo> feed;
     
     @Override
     public UUID getId() {
@@ -43,13 +43,13 @@ public class Feed extends Entidade {
         this.categoria = categoria;
     }
 
-    public List<Artigo> getArtigos() {
-        if (artigos == null) artigos = new ArrayList<Artigo>();
-        return artigos;
+    public List<Artigo> getFeed() {
+        if (feed == null) feed = new ArrayList<Artigo>();
+        return feed;
     }
 
-    public void setArtigos(List<Artigo> artigos) {
-        this.artigos = artigos;
+    public void setFeed(List<Artigo> artigos) {
+        this.feed = artigos;
     }
     
 }

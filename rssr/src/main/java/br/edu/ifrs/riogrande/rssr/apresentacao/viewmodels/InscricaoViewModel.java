@@ -1,6 +1,6 @@
 package br.edu.ifrs.riogrande.rssr.apresentacao.viewmodels;
 
-public class FeedViewModel {
+public class InscricaoViewModel {
     private String nome;
     private String url;
     private String categoria;

@@ -1,5 +1,5 @@
 @host=http://localhost:8080
-@feedId=251daf43-06ac-4866-80f1-e261064a31bb
+@feedId=efc923ca-a005-4c9b-b923-44f2e24b0b36
 
 ###
 POST {{host}}/api/v1/feed HTTP/1.1
@@ -10,6 +10,28 @@ Content-Type: application/json
     "nome": "IFRS9",
     "url": "https://ifrs.edu.br/rss",
     "categoria": "Educacao"
+}
+
+###
+POST {{host}}/api/v1/feed HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+    "nome": "BBC Notícias",
+    "url": "https://feeds.bbci.co.uk/portuguese/rss.xml",
+    "categoria": "noticias"
+}
+
+###
+PUT {{host}}/api/v1/feed/{{feedId}} HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+    "nome": "BBC Notícias 2",
+    "url": "https://feeds.bbci.co.uk/portuguese/rss.xml",
+    "categoria": "noticias"
 }
 
 ###
@@ -32,11 +54,15 @@ GET {{host}}/api/v1/feed?buscar=30 HTTP/1.1
 Accept: application/json
 
 ###
-GET {{host}}/api/v1/feed/Ensino?buscar=5 HTTP/1.1
+GET {{host}}/api/v1/feed/noticias?buscar=5 HTTP/1.1
 Accept: application/json
 
 ###
-GET {{host}}/api/v1/feed/{{feedId}}/content HTTP/1.1
+GET {{host}}/api/v1/feed/{{feedId}}/feed?pular=10&buscar=1 HTTP/1.1
+Accept: application/json
+
+###
+GET {{host}}/api/v1/feed/{{feedId}}/feed?pular=0&buscar=100 HTTP/1.1
 Accept: application/json
 
 ###
